@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Header() {
-
-
   const Links = [
     {
       name: "Acheter neuve",
@@ -31,16 +29,16 @@ export default function Header() {
     <>
       <section>
         <div className="flex flex-row">
-          <div className="flex mr-60">
+          <div className="flex">
             <Link to="/">
-              <img src="/images/logo/carvantage-logo.png" alt="logo" className="w-60" />
+              <img src="/images/logo/carvantage-logo.png" alt="logo" className="w-60 flex" />
             </Link>
           </div>
-          <div>
-            <ul className="justify-end md:flex md:items-center md:text-xs sm:flex-row" >
+          <div className="container-fluid">
+            <ul className="justify-end md:flex md:items-center sm:flex-row" >
               {
                 Links.map((link) => (
-                  <li key={link.name} className="p-4">
+                  <li key={link.name} className="p-4 hover:text-orange-500 hover:border-b-4 border-orange-500">
                     <Link to={link.link}>{link.name}</Link>
                   </li>
                 ))
