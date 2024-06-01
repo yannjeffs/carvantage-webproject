@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function HomeContent() {
   const Stickers = [
     {
@@ -22,22 +24,30 @@ export default function HomeContent() {
     {
       name: "Honda CR-V 2020 AWD",
       src: "/images/occasion_car_image/2020-Honda-CRV.jpg",
-      price: "19 000 000 F CFA"
+      price: "19 000 000 F CFA",
+      button: "Voir la Honda CR-V",
+      link: "/occasioncar"
     },
     {
       name: "Mercedes C300 4Matic 2012",
       src: "/images/occasion_car_image/mercedes-C300-4matic-2012.jpg",
-      price: "15 500 000 F CFA"
+      price: "15 500 000 F CFA",
+      button: "Voir la Mercedes C300",
+      link: "/occasioncar"
     },
     {
       name: "Nissan Qashqai 2018",
       src: "/images/occasion_car_image/nissan-qashqai-2018.jpg",
-      price: "16 000 000 F CFA"
+      price: "16 000 000 F CFA",
+      button: "Voir la Nissan Qashqai",
+      link: "/occasioncar"
     },
     {
       name: "Toyota RAV4 2016 AWD Limited",
       src: "/images/occasion_car_image/toyota-RAV4-2016.jpg",
-      price: "17 000 000 F CFA"
+      price: "17 000 000 F CFA",
+      button: "Voir la Toyota RAV4",
+      link: "/occasioncar"
     }
   ]
 
@@ -45,22 +55,30 @@ export default function HomeContent() {
     {
       name: "BMW 540i 2022",
       src: "/images/new_car_image/540i-bmw.jpg",
-      price: "28 000 000 F CFA"
+      price: "30 000 000 F CFA",
+      button: "Voir la BMW 540i",
+      link: "/newcar"
     },
     {
       name: "Mercedes GLE 4Matic 2022",
       src: "/images/new_car_image/2021_mercedes-benz_gle.jpg",
-      price: "45 000 000 F CFA"
+      price: "45 000 000 F CFA",
+      button: "Voir la Mercedes GLE",
+      link: "/newcar"
     },
     {
       name: "Kia Sportage 2022",
       src: "/images/new_car_image/2022-Kia-Sportage.jpg",
-      price: "40 000 000 F CFA"
+      price: "40 000 000 F CFA",
+      button: "Voir la KIA Sportage",
+      link: "/newcar"
     },
     {
       name: "Hyundai Tucson 2021",
       src: "/images/new_car_image/hyundai-tucson-2021.jpeg",
-      price: "32 000 000 F CFA"
+      price: "32 000 000 F CFA",
+      button : "Voir la Hyundai Tucson",
+      link: "/newcar"
     }
   ]
 
@@ -93,12 +111,37 @@ export default function HomeContent() {
             <div className="text-center pt-8">
               <p className="font-bold text-4xl">NOS OFFRES DE VOITURES NEUVES DU MOMENT</p>
               <div>
-                <ul className="flex flex-row p-4">
+                <ul className="flex-row p-4 text-center grid place-content-center gap-2 grid-cols-4">
                   {
-                    NewCar.map((newCar) => (
-                      <li key={newCar.src}>
-                        <img src={newCar.src} alt={newCar.name} className="object-cover w-100  h-100 p-2" />
-                        <p>A partir de {newCar.price}</p>
+                    NewCar.map((newCar, index) => (
+                      <li key={index} className="text-center">
+                        <img src={newCar.src} alt={newCar.name} className="object-cover h-60" />
+                        <p className="font-bold pt-4">{newCar.name}</p>
+                        <p className="pt-4">A partir de {newCar.price}</p>
+                        <div className="pt-4">
+                          <Link to={newCar.link}>
+                            <button className="h-12 w-60 duration-200 bg-orange-500 hover:bg-white hover:border-2 hover:border-orange-500">{newCar.button}</button>
+                          </Link>
+                        </div>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+              <p className="font-bold text-4xl pt-8">NOS OFFRES DE VOITURES D&apos;OCCASION DU MOMENT</p>
+              <div>
+                <ul className="flex-row p-4 text-center grid place-content-center gap-2 grid-cols-4">
+                  {
+                    OccasionCar.map((occasionCar, index) => (
+                      <li key={index} className="text-center">
+                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-60" />
+                        <p className="font-bold pt-4">{occasionCar.name}</p>
+                        <p className="pt-4">A partir de {occasionCar.price}</p>
+                        <div className="pt-4">
+                          <Link to={occasionCar.link}>
+                            <button className="h-12 w-60 duration-200 bg-orange-500 hover:bg-white hover:border-2 hover:border-orange-500">{occasionCar.button}</button>
+                          </Link>
+                        </div>
                       </li>
                     ))
                   }
