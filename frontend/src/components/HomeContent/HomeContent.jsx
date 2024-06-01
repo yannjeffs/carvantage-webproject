@@ -101,7 +101,7 @@ export default function HomeContent() {
                     </li>
                   ))
                 }
-              </ul> {/**liste d'images */}
+              </ul> {/**liste de stickers */}
             </div>
           </div>
         </div>
@@ -146,6 +146,17 @@ export default function HomeContent() {
                     ))
                   } {/**présentation des offres sur les voitures d'occasion */}
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p className="text-center text-2xl p-12">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
+            <div className="gap-2 grid grid-cols-2 flex-row place-content-center">
+              <div className="float-left">
+                <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover" style={{ width: "40rem"}} />
+              </div>
+              <div className="float-right pr-8">
+                <p className="text-center items-center justify-center">Nous disposons d&apos;un centre de visite technique technique et une équipe de techniciens surqualifiés et surentrainés pour pouvoir</p>
               </div>
             </div>
           </div>
