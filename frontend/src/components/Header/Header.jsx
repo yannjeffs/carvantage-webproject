@@ -38,8 +38,10 @@ export default function Header() {
             <ul className="justify-end md:flex md:items-center sm:flex-row" >
               {
                 Links.map((link) => (
-                  <li key={link.name} className="p-4 hover:text-orange-500 hover:border-b-4 border-orange-500">
-                    <Link to={link.link}>{link.name}</Link>
+                  <li key={link.name} className="hover:text-orange-500 hover:border-b-4 border-orange-500">
+                    <Link to={link.link}>
+                      <button className="p-4">{link.name}</button>
+                    </Link>
                   </li>
                 ))
               }

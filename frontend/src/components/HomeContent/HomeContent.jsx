@@ -125,7 +125,7 @@ export default function HomeContent() {
                         </div>
                       </li>
                     ))
-                  }
+                  } {/**presentation des offres sur les voitures neuves */}
                 </ul>
               </div>
               <p className="font-bold text-4xl pt-8">NOS OFFRES DE VOITURES D&apos;OCCASION DU MOMENT</p>
@@ -144,7 +144,7 @@ export default function HomeContent() {
                         </div>
                       </li>
                     ))
-                  }
+                  } {/**présentation des offres sur les voitures d'occasion */}
                 </ul>
               </div>
             </div>
