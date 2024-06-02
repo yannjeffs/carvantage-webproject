@@ -139,7 +139,7 @@ export default function HomeContent() {
                         <p className="pt-4">A partir de {occasionCar.price}</p>
                         <div className="pt-4">
                           <Link to={occasionCar.link}>
-                            <button className="h-12 w-60 duration-200 bg-orange-500 hover:bg-white hover:border-2 hover:border-orange-500">{occasionCar.button}</button>
+                            <button className="h-12 w-60 duration-200 bg-orange-500 text-white hover:bg-white hover:border hover:border-orange-500 hover:text-black">{occasionCar.button}</button>
                           </Link>
                         </div>
                       </li>
@@ -150,13 +150,13 @@ export default function HomeContent() {
             </div>
           </div>
           <div>
-            <p className="text-center text-2xl p-12">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
+            <p className="text-center text-3xl p-12 font-bold">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
             <div className="gap-2 grid grid-cols-2 flex-row place-content-center">
               <div className="float-left">
                 <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover" style={{ width: "40rem"}} />
               </div>
-              <div className="float-right pr-8">
-                <p className="text-center items-center justify-center">Nous disposons d&apos;un centre de visite technique technique et une équipe de techniciens surqualifiés et surentrainés pour pouvoir</p>
+              <div className="float-right pr-8 h-screen flex">
+                <p className="text-center items-center justify-center flex">Nous disposons d&apos;un centre de visite technique technique et une équipe de techniciens et de mécaniciens surqualifiés et surentrainés pour intervenir sur n&apos;importe quelle panne que pourrait avoir votre véhicule. Vous pouvez donc nous faire confiance pour des diagnostiques fiables mais aussi pour des interventions et réparations sûres et à faibles coûts.</p>
               </div>
             </div>
           </div>
