@@ -77,7 +77,7 @@ export default function HomeContent() {
       name: "Hyundai Tucson 2021",
       src: "/images/new_car_image/hyundai-tucson-2021.jpeg",
       price: "32 000 000 F CFA",
-      button : "Voir la Hyundai Tucson",
+      button: "Voir la Hyundai Tucson",
       link: "/newcar"
     }
   ]
@@ -89,10 +89,10 @@ export default function HomeContent() {
           <p className="text-5xl font-bold">DECOUVREZ VOS PLUS BELLES VOITURES CHEZ <span className="text-orange-500">CARVANTAGE</span></p>
           <p className="text-xl mt-4">CARVANTAGE vous fait découvrir son immense parc automobile allant de 2010 à 2024 passant par des véhicules neufs et d&apos;occasions qui n&apos;attendent q&apos;un cheteur, <span className="font-bold">VOUS !</span></p>
         </div>
-        <div className=" p-4 bg-slate-300 align-center justify-center text-center">
+        <div className="p-4 bg-slate-300 align-center justify-center text-center">
           <div>
-            <div className="text-center">
-              <ul className="flex flex-row">
+            <div className="flex text-center overflow-x-auto place-content-center">
+              <ul className="flex">
                 {
                   Stickers.map((sticker) => (
                     <li key={sticker.description}>
@@ -111,49 +111,69 @@ export default function HomeContent() {
             <div className="text-center pt-8">
               <p className="font-bold text-4xl">NOS OFFRES DE VOITURES NEUVES DU MOMENT</p>
               <div>
-                <ul className="flex-row p-4 text-center grid place-content-center gap-2 grid-cols-4">
+                <ul className="flex-col p-4 text-center lg:grid lg:place-content-center lg:gap-2 lg:grid-cols-4">
                   {
                     NewCar.map((newCar, index) => (
-                      <li key={index} className="text-center">
-                        <img src={newCar.src} alt={newCar.name} className="object-cover h-60" />
+                      <li key={index} className="text-center pt-4">
+                        <img src={newCar.src} alt={newCar.name} className="object-cover h-full w-full lg:h-60" />
                         <p className="font-bold pt-4">{newCar.name}</p>
                         <p className="pt-4">A partir de {newCar.price}</p>
                         <div className="pt-4">
                           <Link to={newCar.link}>
-                            <button className="h-12 w-60 duration-200 bg-orange-500 hover:bg-white hover:border-2 hover:border-orange-500">{newCar.button}</button>
+                            <button className="h-12 w-60 font-bold duration-200 text-white bg-orange-500 hover:bg-black">{newCar.button}</button>
                           </Link>
                         </div>
                       </li>
                     ))
                   } {/**presentation des offres sur les voitures neuves */}
                 </ul>
+                <Link to="/newcar" className="text-center text-orange-500 flex place-content-center  duration-200 hover:text-black hover:space-x-2">
+                  <div className="float-left">
+                    <p>Voir toutes les offres</p>
+                  </div>
+                  <div className="float-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -3 24 24" strokeWidth={2} stroke="currentColor" className="size-4 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                </Link>
               </div>
               <p className="font-bold text-4xl pt-8">NOS OFFRES DE VOITURES D&apos;OCCASION DU MOMENT</p>
               <div>
-                <ul className="flex-row p-4 text-center grid place-content-center gap-2 grid-cols-4">
+                <ul className="flex-col p-4 text-center lg:grid lg:place-content-center lg:gap-2 lg:grid-cols-4">
                   {
                     OccasionCar.map((occasionCar, index) => (
-                      <li key={index} className="text-center">
-                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-60" />
+                      <li key={index} className="text-center pt-4">
+                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-full w-full lg:h-60" />
                         <p className="font-bold pt-4">{occasionCar.name}</p>
                         <p className="pt-4">A partir de {occasionCar.price}</p>
                         <div className="pt-4">
                           <Link to={occasionCar.link}>
-                            <button className="h-12 w-60 duration-200 bg-orange-500 text-white hover:bg-white hover:border hover:border-orange-500 hover:text-black">{occasionCar.button}</button>
+                            <button className="h-12 w-60 font-bold duration-200 bg-orange-500 text-white hover:bg-black">{occasionCar.button}</button>
                           </Link>
                         </div>
                       </li>
                     ))
                   } {/**présentation des offres sur les voitures d'occasion */}
                 </ul>
+                <Link to="/occasioncar" className="text-center text-orange-500 flex place-content-center duration-200 hover:text-black hover:space-x-2">
+                  <div className="float-left">
+                    <p>Voir toutes les offres</p>
+                  </div>
+                  <div className="float-right">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -3 24 24" strokeWidth={2} stroke="currentColor" className="size-4 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
           <div>
-            <p className="text-center text-3xl p-12 font-bold">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
+            <p className="text-center text-xl lg:text-3xl p-12 font-bold">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
             <div className="gap-2 grid grid-cols-2 flex-row place-content-center">
               <div className="float-left">
-                <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover" style={{ width: "40rem"}} />
+                <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover" style={{ width: "40rem" }} />
               </div>
               <div className="float-right pr-8 h-screen flex">
                 <p className="text-center items-center justify-center flex">Nous disposons d&apos;un centre de visite technique technique et une équipe de techniciens et de mécaniciens surqualifiés et surentrainés pour intervenir sur n&apos;importe quelle panne que pourrait avoir votre véhicule. Vous pouvez donc nous faire confiance pour des diagnostiques fiables mais aussi pour des interventions et réparations sûres et à faibles coûts.</p>
