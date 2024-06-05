@@ -24,7 +24,6 @@ export default function Header() {
     },
   ]
 
-
   return (
     <>
       <section>
@@ -35,12 +34,12 @@ export default function Header() {
             </Link>
           </div>
           <div className="container-fluid">
-            <ul className="justify-end md:flex md:items-center sm:flex-row" >
+            <ul className="sm:justify-end lg:flex md:items-center sm:flex-row" >
               {
                 Links.map((link) => (
-                  <li key={link.name} className="hover:text-orange-500 hover:border-b-4 border-orange-500">
+                  <li key={link.name} className="duration-200 hover:text-orange-500 hover:border-b-4 border-orange-500">
                     <Link to={link.link}>
-                      <button className="p-4">{link.name}</button>
+                      <button className="pl-6 pr-6 pt-3 pb-3">{link.name}</button>
                     </Link>
                   </li>
                 ))

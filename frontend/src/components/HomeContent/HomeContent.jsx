@@ -86,7 +86,7 @@ export default function HomeContent() {
     <>
       <div className="pt-8">
         <div className="p-12 text-center sm:text-right">
-          <p className="text-5xl font-bold">DECOUVREZ VOS PLUS BELLES VOITURES CHEZ <span className="text-orange-500">CARVANTAGE</span></p>
+          <p className="text-2xl md:text-5xl font-bold">DECOUVREZ VOS PLUS BELLES VOITURES CHEZ <span className="text-orange-500">CARVANTAGE</span></p>
           <p className="text-xl mt-4">CARVANTAGE vous fait découvrir son immense parc automobile allant de 2010 à 2024 passant par des véhicules neufs et d&apos;occasions qui n&apos;attendent q&apos;un cheteur, <span className="font-bold">VOUS !</span></p>
         </div>
         <div className="p-4 bg-slate-300 align-center justify-center text-center">
@@ -109,13 +109,13 @@ export default function HomeContent() {
           <div>
             <p className="text-center text-2xl pt-8">Pour vous, nous avons plusieurs offres de voitures neuves et d&apos;occasions à vous proposer :</p>
             <div className="text-center pt-8">
-              <p className="font-bold text-4xl">NOS OFFRES DE VOITURES NEUVES DU MOMENT</p>
+              <p className="font-bold text-2xl pl-3 pr-3 lg:text-4xl">NOS OFFRES DE VOITURES NEUVES DU MOMENT</p>
               <div>
                 <ul className="flex-col p-4 text-center lg:grid lg:place-content-center lg:gap-2 lg:grid-cols-4">
                   {
                     NewCar.map((newCar, index) => (
                       <li key={index} className="text-center pt-4">
-                        <img src={newCar.src} alt={newCar.name} className="object-cover h-full w-full lg:h-60" />
+                        <img src={newCar.src} alt={newCar.name} className="object-cover h-full w-full lg:h-96" />
                         <p className="font-bold pt-4">{newCar.name}</p>
                         <p className="pt-4">A partir de {newCar.price}</p>
                         <div className="pt-4">
@@ -144,7 +144,7 @@ export default function HomeContent() {
                   {
                     OccasionCar.map((occasionCar, index) => (
                       <li key={index} className="text-center pt-4">
-                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-full w-full lg:h-60" />
+                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-full w-full lg:h-96" />
                         <p className="font-bold pt-4">{occasionCar.name}</p>
                         <p className="pt-4">A partir de {occasionCar.price}</p>
                         <div className="pt-4">
@@ -170,12 +170,12 @@ export default function HomeContent() {
             </div>
           </div>
           <div>
-            <p className="text-center text-xl lg:text-3xl p-12 font-bold">Etant donné qur nous savons l&apos;intérêt que vous attachez pour votre voiture, nous vous aidons à l&apos;entretenir pour une meilleure durabilité</p>
-            <div className="gap-2 grid grid-cols-2 flex-row place-content-center">
-              <div className="float-left">
-                <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover" style={{ width: "40rem" }} />
+            <p className="text-center text-xl lg:text-3xl p-12 font-bold">Faites nous confiance pour l&apos;entretien de votre véhicule</p>
+            <div className="flex flex-col lg:gap-2 lg:grid lg:grid-cols-2 lg:flex-row lg:place-content-center">
+              <div className="w-full lg:float-left">
+                <img src="/images/centre-visite-technique.jpg" alt="image d'un centre de visite technique" className="object-cover w-full" />
               </div>
-              <div className="float-right pr-8 h-screen flex">
+              <div className="text-center p-5 lg:float-right lg:pr-8 lg:flex">
                 <p className="text-center items-center justify-center flex">Nous disposons d&apos;un centre de visite technique technique et une équipe de techniciens et de mécaniciens surqualifiés et surentrainés pour intervenir sur n&apos;importe quelle panne que pourrait avoir votre véhicule. Vous pouvez donc nous faire confiance pour des diagnostiques fiables mais aussi pour des interventions et réparations sûres et à faibles coûts.</p>
               </div>
             </div>
