@@ -180,6 +180,12 @@ export default function HomeContent() {
               </div>
             </div>
           </div>
+          <div>
+            <p className="text-center p-4 font-bold text-2xl md:text-3xl">Pour vous, une large séléction de marques de voiture pour faciliter votre choix</p>
+            <div className="place-content-center">
+              
+            </div>
+          </div>
         </div>
       </div>
     </>
