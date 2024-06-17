@@ -74,7 +74,7 @@ export default function NewCar() {
               {
                 Brands.map((brands, index) => (
                   <Link key={index} className="md:border-2 p-4">
-                    <li key={index} className="none p-4 border-2 md:border-none">
+                    <li key={index} className="none p-6 border-2 md:border-none">
                         <img src={brands.imageUrl} alt={brands.name} className=" w-40 place-content-center object-cover lg:float-left" />
                         <p className="font-bold text-xl md:text-2xl lg:float-right">{brands.name}</p>
                     </li>

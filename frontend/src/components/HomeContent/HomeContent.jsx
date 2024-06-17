@@ -115,7 +115,7 @@ export default function HomeContent() {
                   {
                     NewCar.map((newCar, index) => (
                       <li key={index} className="text-center pt-4">
-                        <img src={newCar.src} alt={newCar.name} className="object-cover h-full w-full lg:h-60" />
+                        <img src={newCar.src} alt={newCar.name} className="object-cover h-full w-full md:h-60 lg:h-60" />
                         <p className="font-bold pt-4">{newCar.name}</p>
                         <p className="pt-4">A partir de {newCar.price}</p>
                         <div className="pt-4">
@@ -138,13 +138,13 @@ export default function HomeContent() {
                   </div>
                 </Link>
               </div>
-              <p className="font-bold text-4xl pt-8">NOS OFFRES DE VOITURES D&apos;OCCASION DU MOMENT</p>
+              <p className="font-bold text-2xl lg:text-4xl pt-8">NOS OFFRES DE VOITURES D&apos;OCCASION DU MOMENT</p>
               <div>
                 <ul className="flex-col p-4 text-center md:grid md:place-content-center md:grid-cols-2 md:gap-2 lg:grid lg:place-content-center lg:gap-2 lg:grid-cols-4">
                   {
                     OccasionCar.map((occasionCar, index) => (
                       <li key={index} className="text-center pt-4">
-                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-full w-full lg:h-60" />
+                        <img src={occasionCar.src} alt={occasionCar.name} className="object-cover h-full w-full md:h-60 lg:h-60" />
                         <p className="font-bold pt-4">{occasionCar.name}</p>
                         <p className="pt-4">A partir de {occasionCar.price}</p>
                         <div className="pt-4">
