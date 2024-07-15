@@ -9,6 +9,7 @@ export default function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/newcar" element={<NewCar />} />
         <Route path="/occasioncar" element={<OccasionCar />} />
+        <Route path="/search/:searchTerm" element={<Home />} />
     </Routes>
   )
 }
