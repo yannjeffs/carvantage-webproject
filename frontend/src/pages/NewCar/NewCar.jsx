@@ -75,14 +75,24 @@ export default function NewCar() {
                 Brands.map((brands, index) => (
                   <Link key={index} className="md:border-2 p-4">
                     <li key={index} className="none p-6 border-2 md:border-none">
-                        <img src={brands.imageUrl} alt={brands.name} className=" w-40 place-content-center object-cover lg:float-left" />
-                        <p className="font-bold text-xl md:text-2xl lg:float-right">{brands.name}</p>
+                      <img src={brands.imageUrl} alt={brands.name} className=" w-40 place-content-center object-cover lg:float-left" />
+                      <p className="font-bold text-xl md:text-2xl lg:float-right">{brands.name}</p>
                     </li>
                   </Link>
                 ))
               }
             </ul>
           </div>
+          <Link to="/newcar" className="text-center text-orange-500 flex place-content-center duration-200 hover:text-black hover:space-x-2">
+            <div className="float-left">
+              <p>Tout afficher</p>
+            </div>
+            <div className="float-right">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -3 24 24" strokeWidth={2} stroke="currentColor" className="size-4 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </div>
+          </Link>
         </div>
       </div>
     </>

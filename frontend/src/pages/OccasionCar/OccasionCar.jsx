@@ -1,5 +1,9 @@
 export default function OccasionCar() {
   return (
-    <div>OccasionCar</div>
+    <>
+      <div className="pt-8">
+        
+      </div>
+    </>
   )
 }
